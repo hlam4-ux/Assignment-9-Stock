@@ -58,4 +58,11 @@ double standardDev(const std::vector<double>& values, int startDay, int endDay)
 
 vector<double> parseData(const std::string& csv)
 {
+  vector<double> result;
+
+  int start = 0;
+  int comma = csv.find(",");
+
+  while (comma != string::npos) {
+  }
 }
