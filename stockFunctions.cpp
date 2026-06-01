@@ -42,4 +42,16 @@ double average(const std::vector<double>& values, int startDay, int endDay)
 
 double standardDev(const std::vector<double>& values, int startDay, int endDay)
 {
+  double avg = average(values, startDay, endDay);
+
+  double total = 0;
+  int count = 0;
+
+  for (int i = startDay; i <= endDay; i++) {
+    double diff = values[i] - avg;
+    total += diff * diff;
+    count++;
+  }
+
+  return sqrt(total / count);
 }
