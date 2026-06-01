@@ -55,3 +55,7 @@ double standardDev(const std::vector<double>& values, int startDay, int endDay)
 
   return sqrt(total / count);
 }
+
+vector<double> parseData(const std::string& csv)
+{
+}
