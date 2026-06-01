@@ -64,5 +64,12 @@ vector<double> parseData(const std::string& csv)
   int comma = csv.find(",");
 
   while (comma != string::npos) {
+    string piece = csv.substr(start, comma - start);
+    result.push_back(stod(piece));
+    start = comma + 1;
+    comma = csv.find(",", start);
   }
+
+  result.push_back(stod(csv.substr(start)));
+  return result;
 }
