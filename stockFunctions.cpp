@@ -13,3 +13,15 @@ double percentChange(const vector<double>& values, int startDay, int endDay)
 
   return change / startValue * 100;
 }
+
+double highestValue(const vector<double>& values, int startDay, int endDay)
+{
+  double highest = values[startDay];
+
+  for (int i = startDay; i <= endDay; i++) {
+    if (values[i] > highest) {
+      highest = values[i];
+    }
+  }
+  return highest;
+}
