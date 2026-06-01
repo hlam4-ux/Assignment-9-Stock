@@ -23,6 +23,7 @@ double highestValue(const vector<double>& values, int startDay, int endDay)
       highest = values[i];
     }
   }
+
   return highest;
 }
 
@@ -31,5 +32,10 @@ double average(const std::vector<double>& values, int startDay, int endDay)
   double total = 0;
   int count = 0;
 
-  for
+  for (int i = startDay; i <= endDay; i++) {
+    total += values[i];
+    count++;
+  }
+
+  return total / count;
 }
