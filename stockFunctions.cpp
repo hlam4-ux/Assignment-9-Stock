@@ -90,3 +90,8 @@ vector<double> getChangeVector(const vector<double>& values)
 
   return changes;
 }
+
+double maxDrawdown(const std::vector<double>& values, int startDay, int endDay)
+{
+  double worstDrop = 0;
+}
