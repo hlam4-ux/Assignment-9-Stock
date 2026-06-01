@@ -97,6 +97,13 @@ double maxDrawdown(const std::vector<double>& values, int startDay, int endDay)
 
   for (int buyDay = startDay; buyDay <= endDay; buyDay++) {
     for (int sellDay = buyDay + 1; sellDay <= endDay; sellDay++) {
+      double loss = values[sellDay] - values[buyDay];
+
+      if (loss < worstDrop) {
+        worstDrop = loss;
+      }
     }
   }
+
+  return worstDrop;
 }
