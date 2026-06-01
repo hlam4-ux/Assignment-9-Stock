@@ -71,7 +71,7 @@ vector<double> parseData(const std::string& csv)
   }
 
   result.push_back(stod(csv.substr(start)));
-  return result;
+  return result
 }
 
 vector<double> getChangeVector(const vector<double>& values)
@@ -94,4 +94,9 @@ vector<double> getChangeVector(const vector<double>& values)
 double maxDrawdown(const std::vector<double>& values, int startDay, int endDay)
 {
   double worstDrop = 0;
+
+  for (int buyDay = startDay; buyDay <= endDay; buyDay++) {
+    for (int sellDay = buyDay + 1; sellDay <= endDay; sellDay++) {
+    }
+  }
 }
