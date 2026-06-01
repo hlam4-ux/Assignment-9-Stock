@@ -71,7 +71,7 @@ vector<double> parseData(const std::string& csv)
   }
 
   result.push_back(stod(csv.substr(start)));
-  return result
+  return result;
 }
 
 vector<double> getChangeVector(const vector<double>& values)
