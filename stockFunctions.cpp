@@ -76,4 +76,17 @@ vector<double> parseData(const std::string& csv)
 
 vector<double> getChangeVector(const vector<double>& values)
 {
+  vector<double> changes;
+
+  if (values.size() == 0) {
+    return changes;
+  }
+
+  changes.push_back(0);
+
+  for (int i = 1; i < values.size(); i++) {
+    changes.push_back(values[i] - values[i - 1]);
+  }
+
+  return changes;
 }
